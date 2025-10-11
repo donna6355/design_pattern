@@ -51,7 +51,7 @@ enum Periode implements MirFilter {
 class MirDropDown<T extends MirFilter> extends StatelessWidget {
   final String hint;
   final List<T> values;
-  final Function(T?) onSelected;
+  final Function(T) onSelected;
   const MirDropDown({
     required this.values,
     required this.hint,
@@ -122,20 +122,20 @@ class _StrategyPageState extends State<StrategyPage> {
               values: Location.values,
               hint: '위치',
               onSelected: (val) => setState(
-                () => _call = 'API 호출합니다! isIndoor = ${val?.isIndoor}',
+                () => _call = 'API 호출합니다! isIndoor = ${val.isIndoor}',
               ),
             ),
             MirDropDown<OpStatus>(
               values: OpStatus.values,
               hint: '상태',
               onSelected: (val) =>
-                  setState(() => _call = 'API 호출합니다! status = ${val?.code}'),
+                  setState(() => _call = 'API 호출합니다! status = ${val.code}'),
             ),
             MirDropDown<Periode>(
               values: Periode.values,
               hint: '기간',
               onSelected: (val) =>
-                  setState(() => _call = 'API 호출합니다! periode = ${val?.days}'),
+                  setState(() => _call = 'API 호출합니다! periode = ${val.days}'),
             ),
 
             Text('상태값은 다른 상세페이지에서 이렇게도 사용되요!'),
