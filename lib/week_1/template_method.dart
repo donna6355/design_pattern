@@ -8,7 +8,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-const String _mirImg =
+const String mirImg =
     "https://play-lh.googleusercontent.com/KzLezqL9qrAf1cG-84JOP7kvWQh9P2K9_GZefPlvKgyi-35oQvkfrNNU2vt7tw-vrFg=w240-h480-rw";
 
 class MirFile {}
@@ -23,7 +23,7 @@ abstract class ImageUploader {
     if (!withinSize) return (false, "Too Big Image", null);
     debugPrint("File Size Fine");
     final isSuccess = await uploadImage();
-    return isSuccess ? (true, null, _mirImg) : (false, "Upload Failure", null);
+    return isSuccess ? (true, null, mirImg) : (false, "Upload Failure", null);
   }
 
   //take photo, select from gallery or file system
