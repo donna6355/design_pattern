@@ -15,16 +15,6 @@ const String _hairBall =
 const String _catDoll =
     'https://www.clipartmax.com/png/middle/269-2695850_cat-icon-cat-icon-png.png';
 
-class Counter extends ChangeNotifier {
-  int _count = 0;
-  int get count => _count;
-
-  void increment() {
-    _count++;
-    notifyListeners();
-  }
-}
-
 enum MirTopic { every, five, ten }
 
 class MirBroker {
@@ -171,6 +161,17 @@ class _ObserverPageState extends State<ObserverPage> {
 }
 
 //Observer Pattern
+
+// class Counter extends ChangeNotifier {
+//   int _count = 0;
+//   int get count => _count;
+
+//   void increment() {
+//     _count++;
+//     notifyListeners();
+//   }
+// }
+
 // class FirstHairBall extends StatelessWidget {
 //   final Counter counter;
 //   const FirstHairBall({required this.counter, super.key});
@@ -239,6 +240,13 @@ class _ObserverPageState extends State<ObserverPage> {
 
 // class _ObserverPageState extends State<ObserverPage> {
 //   final Counter counter = Counter();
+
+//   @override
+//   void dispose() {
+//     counter.dispose();
+//     super.dispose();
+//   }
+
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
