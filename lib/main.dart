@@ -1,6 +1,7 @@
 import 'package:design_pattern/week_1/strategy.dart';
 import 'package:design_pattern/week_1/template_method.dart';
 import 'package:design_pattern/week_2/observer.dart';
+import 'package:design_pattern/week_3/composite.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,6 +24,8 @@ class MyApp extends StatelessWidget {
         '/strategy': (context) => const StrategyPage(),
         '/template': (context) => const TemplateMethodPage(),
         '/observer': (context) => const ObserverPage(),
+        '/decorator': (context) => const CompositePage(),
+        '/composite': (context) => const CompositePage(),
       },
     );
   }
@@ -54,6 +57,10 @@ class MirStudyHome extends StatelessWidget {
               TextButton(
                 onPressed: () => Navigator.pushNamed(context, '/observer'),
                 child: Text("Observer Pattern"),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pushNamed(context, '/composite'),
+                child: Text("Composite Pattern"),
               ),
             ],
           ),
