@@ -1,3 +1,4 @@
+import 'package:design_pattern/week4/factory_method.dart';
 import 'package:design_pattern/week_1/strategy.dart';
 import 'package:design_pattern/week_1/template_method.dart';
 import 'package:design_pattern/week_2/observer.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/observer': (context) => const ObserverPage(),
         '/decorator': (context) => const CompositePage(),
         '/composite': (context) => const CompositePage(),
+        '/factory': (context) => const FactoryPage(),
       },
     );
   }
@@ -61,6 +63,10 @@ class MirStudyHome extends StatelessWidget {
               TextButton(
                 onPressed: () => Navigator.pushNamed(context, '/composite'),
                 child: Text("Composite Pattern"),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pushNamed(context, '/factory'),
+                child: Text("Factroy Method Pattern"),
               ),
             ],
           ),
