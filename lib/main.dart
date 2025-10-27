@@ -1,3 +1,4 @@
+import 'package:design_pattern/week4/abstract_factory.dart';
 import 'package:design_pattern/week4/factory_method.dart';
 import 'package:design_pattern/week_1/strategy.dart';
 import 'package:design_pattern/week_1/template_method.dart';
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
       title: 'GOE DESIGN PATTERN YAY',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(foregroundColor: Colors.white),
+        ),
       ),
       home: MirStudyHome(),
       routes: {
@@ -28,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/decorator': (context) => const CompositePage(),
         '/composite': (context) => const CompositePage(),
         '/factory': (context) => const FactoryPage(),
+        '/abstractFactory': (context) => const AbstractFactoryPage(),
       },
     );
   }
@@ -67,6 +72,11 @@ class MirStudyHome extends StatelessWidget {
               TextButton(
                 onPressed: () => Navigator.pushNamed(context, '/factory'),
                 child: Text("Factroy Method Pattern"),
+              ),
+              TextButton(
+                onPressed: () =>
+                    Navigator.pushNamed(context, '/abstractFactory'),
+                child: Text("Abstract Factroy Pattern"),
               ),
             ],
           ),

@@ -1,5 +1,30 @@
 import 'package:flutter/material.dart';
 
+final List<User> users = [
+  User(
+    name: 'Mir Isaac',
+    img: 'https://avatars.githubusercontent.com/u/71857113?s=80&v=4',
+    level: UserLevel.beginner,
+  ),
+  User(
+    name: 'Bob',
+    img:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Robert_C._Martin_surrounded_by_computers_%28cropped%29.jpg/250px-Robert_C._Martin_surrounded_by_computers_%28cropped%29.jpg',
+    level: UserLevel.intermediate,
+  ),
+  User(
+    name: 'Charlie',
+    img: 'https://i.pravatar.cc/150?img=3',
+    level: UserLevel.advanced,
+  ),
+  User(
+    name: 'Aiden',
+    img:
+        'https://miro.medium.com/v2/resize:fill:176:176/1*DEjvyuB1Opd9uMg94cRDAw.png',
+    level: UserLevel.master,
+  ),
+];
+
 class User {
   final String name;
   final String img;
@@ -121,30 +146,6 @@ class FactoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<User> users = [
-      User(
-        name: 'Mir Isaac',
-        img: 'https://avatars.githubusercontent.com/u/71857113?s=80&v=4',
-        level: UserLevel.beginner,
-      ),
-      User(
-        name: 'Bob',
-        img:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Robert_C._Martin_surrounded_by_computers_%28cropped%29.jpg/250px-Robert_C._Martin_surrounded_by_computers_%28cropped%29.jpg',
-        level: UserLevel.intermediate,
-      ),
-      User(
-        name: 'Charlie',
-        img: 'https://i.pravatar.cc/150?img=3',
-        level: UserLevel.advanced,
-      ),
-      User(
-        name: 'Aiden',
-        img:
-            'https://miro.medium.com/v2/resize:fill:176:176/1*DEjvyuB1Opd9uMg94cRDAw.png',
-        level: UserLevel.master,
-      ),
-    ];
     return Scaffold(
       appBar: AppBar(title: Text('Factory Pattern')),
       body: Padding(
