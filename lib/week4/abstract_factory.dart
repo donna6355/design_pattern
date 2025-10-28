@@ -162,6 +162,7 @@ class UserDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final LevelFactory factory = LevelFactoryProvider.getFactory(user.level);
     return Stack(
       alignment: Alignment.topCenter,
       children: [
@@ -178,10 +179,8 @@ class UserDashboard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text("환영합니다:)"),
-              LevelFactoryProvider.getFactory(
-                user.level,
-              ).renderCommunityEntry(),
-              LevelFactoryProvider.getFactory(user.level).renderLoungeEntry(),
+              factory.renderCommunityEntry(),
+              factory.renderLoungeEntry(),
             ],
           ),
         ),
