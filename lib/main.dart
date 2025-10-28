@@ -1,5 +1,5 @@
-import 'package:design_pattern/week4/abstract_factory.dart';
-import 'package:design_pattern/week4/factory_method.dart';
+import 'package:design_pattern/week_4/abstract_factory.dart';
+import 'package:design_pattern/week_4/factory_method.dart';
 import 'package:design_pattern/week_1/strategy.dart';
 import 'package:design_pattern/week_1/template_method.dart';
 import 'package:design_pattern/week_2/observer.dart';
