@@ -5,6 +5,8 @@ import 'package:design_pattern/week_1/template_method.dart';
 import 'package:design_pattern/week_2/observer.dart';
 import 'package:design_pattern/week_3/composite.dart';
 import 'package:design_pattern/week_5/state.dart';
+import 'package:design_pattern/week_6/adapter.dart';
+import 'package:design_pattern/week_6/proxy.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,6 +40,8 @@ class MyApp extends StatelessWidget {
         '/factory': (context) => const FactoryPage(),
         '/abstractFactory': (context) => const AbstractFactoryPage(),
         '/state': (context) => const StatePage(),
+        '/adapter': (context) => const AdapterPage(),
+        '/proxy': (context) => const ProxyPage(),
       },
     );
   }
@@ -87,6 +91,15 @@ class MirStudyHome extends StatelessWidget {
                 onPressed: () => Navigator.pushNamed(context, '/state'),
                 child: Text("State Pattern"),
               ),
+              TextButton(
+                onPressed: () => Navigator.pushNamed(context, '/adapter'),
+                child: Text("Adapter Pattern"),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pushNamed(context, '/proxy'),
+                child: Text("Proxy Pattern"),
+              ),
+              const SizedBox(height: 64),
             ],
           ),
         ),
