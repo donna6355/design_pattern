@@ -4,6 +4,7 @@ import 'package:design_pattern/week_1/strategy.dart';
 import 'package:design_pattern/week_1/template_method.dart';
 import 'package:design_pattern/week_2/observer.dart';
 import 'package:design_pattern/week_3/composite.dart';
+import 'package:design_pattern/week_5/state.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(foregroundColor: Colors.white),
+          style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.greenAccent,
+          ),
         ),
       ),
       home: MirStudyHome(),
@@ -33,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/composite': (context) => const CompositePage(),
         '/factory': (context) => const FactoryPage(),
         '/abstractFactory': (context) => const AbstractFactoryPage(),
+        '/state': (context) => const StatePage(),
       },
     );
   }
@@ -77,6 +82,10 @@ class MirStudyHome extends StatelessWidget {
                 onPressed: () =>
                     Navigator.pushNamed(context, '/abstractFactory'),
                 child: Text("Abstract Factroy Pattern"),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pushNamed(context, '/state'),
+                child: Text("State Pattern"),
               ),
             ],
           ),
